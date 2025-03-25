@@ -26,8 +26,6 @@ const postSchema = mongoose.Schema(
             type : Date,
             default: Date.now,
         }
-
-
     },
 
     { 
@@ -36,4 +34,3 @@ const postSchema = mongoose.Schema(
 );
 
 module.exports = mongoose.model('users', postSchema)
-
