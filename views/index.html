@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANDING PAGE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #menu.hidden { display: none; }
+        #menu.block { display: block; }
+        .connexion { border: 1px solid #119797; color: #119797; }
+        .inscription:hover { border: 1px solid #119797; color: #119797; }
+    </style>
+</head>
+<body class="bg-cover bg-center bg-fixed h-screen w-full flex flex-col p-2" style="background-image: linear-gradient(rgba(4, 62, 39, 0.3), rgba(4, 62, 39, 0.3)), url('https://cdn.pixabay.com/photo/2023/11/30/11/47/ai-generated-8421436_1280.jpg'); background-size: cover; background-position: center;">
+    
+    <header class="h-16 bg-white bg-opacity-90 flex items-center justify-between p-4 fixed top-0 left-0 w-full">
+        <div class="flex items-center">
+            <a href="index.html">
+                <img class="rounded-full bg-gray-500 mr-4" width="50px" src="../hackathonIMAGES/WhatsApp Image 2025-02-27 à 08.21.18_8091cfb8.jpg" alt="">
+            </a>
+            
+            <h1 class="text-xl md:text-4xl font-bold text-[#119797]">Care Voice</h1>
+        </div>
+        <select name="option" id="option" class="block lg:hidden bg-[#119797] text-white py-2 rounded-lg">
+            <option value="about">À propos</option>
+            <option value="how">Comment ça marche</option>
+            <option value="testimonials">Témoignages</option>
+            <option value="contact">Contact</option>
+        </select>
+        <nav class="hidden lg:block">
+            <ul class="flex">
+                <li class="mx-2"><a href="#about" class="text-[#037e7e] hover:underline font-bold">À propos</a></li>
+                <li class="mx-2"><a href="#how" class="text-[#037e7e] hover:underline">Comment ça marche</a></li>
+                <li class="mx-2"><a href="#testimonials" class="text-[#037e7e] hover:underline">Témoignages</a></li>
+                <li class="mx-2"><a href="#contact" class="text-[#037e7e] hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- <div id="burger" class="bg-[#119797] hover:bg-[#03bbbb] h-10 w-10 flex items-center justify-center rounded-full">
+            <span class="text-white">&#9776;</span>
+        </div>
+        <div style="top: 93px;" id="menu" class="w-[200px] h-auto relative left-4 bg-[#119797] hidden">
+            <div class="flex justify-end items-center p-2">
+                <div id="croix" class="text-[#119797] font-bold text-4xl w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-[#03bbbb] hover:text-white">
+                    <span>&#9747;</span>
+                </div>
+            </div>
+            <nav class="">
+                <ul class="block text-white text-lg px-4 leading-8">
+                    <li class=""><a href="index.html" class="hover:underline font-bold">Accueil</a></li>
+                    <li class=""><a href="./hackathonHTML/sonAvis.html" class="hover:underline">Donner son avis</a></li>
+                    <li class=""><a href="./hackathonHTML/stats.html" class="hover:underline">Statistiques</a></li>
+                    <li class=""><a href="./hackathonHTML/temoignages.html" class="hover:underline">Témoignages</a></li>
+                    <li class=""><a href="./hackathonHTML/contact.html" class="hover:underline">Contact</a></li>
+                    <li class=""><a href="./hackathonHTML/inscription.html" class="hover:underline border rounded-lg">inscription</a></li>
+                    <li class=""><a href="./hackathonHTML/connexion.html" class="hover:underline border rounded-lg">connexion</a></li>
+                </ul>
+            </nav>
+        </div> -->
+    </header>
+
+    <main class="flex-1 text-center text-white mb-4 mt-12">
+        <h1 class="mt-8 text-3xl md:text-6xl font-bold">Votre avis compte!</h1>
+        <p class="md:text-xl">Aidez-nous à améliorer les services hospitaliers en partageant votre expérience.</p>
+        <a href="./hackathonHTML/inscription.html" class="bg-[#119797] text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#119797] mt-6 inline-block">Donner mon avis</a>
+    </main>
+
+    <section id="about" class="bg-gray-100 py-12 p-4">
+        <h2 class="text-3xl font-bold text-[#119797] text-center">Qui sommes-nous ?</h2>
+        <p class="mt-4 font-semibold text-gray-600">Care Voice est une plateforme innovante conçue pour améliorer la qualité des soins hospitaliers en donnant la parole aux patients. Notre mission est de collecter et analyser les avis des patients afin d’identifier les points forts et les axes d’amélioration des établissements de santé à Abidjan.
+
+            Nous croyons que chaque expérience compte et que la transparence est essentielle pour bâtir un système de santé plus performant et centré sur le patient. Grâce à Care Voice, les patients peuvent partager leurs retours en toute simplicité, et les professionnels de santé peuvent bénéficier de ces insights pour offrir des soins encore plus adaptés aux besoins réels.
+            
+            Notre initiative s’appuie sur des technologies avancées, notamment l’intelligence artificielle, pour analyser les tendances et fournir des rapports détaillés qui aident les hôpitaux et cliniques à prendre des décisions éclairées.</p>
+    </section>
+
+    <section id="dashboard-link" class="text-center py-12">
+        <p class="mb-6 text-white">Cliquez ci-dessous pour accéder au tableau de bord des hôpitaux.</p>
+        <button class="bg-[#119797] text-white py-2 px-4 rounded-md hover:bg-white hover:text-[#119797]">
+            <a href="./hackathonHTML/dashboard.html">Accéder au Tableau de Bord</a>
+        </button>
+    </section>
+    
+
+    <section id="how" class="py-12 text-center">
+        <div class="flex items-center justify-center gap-4">
+            <h2 class="text-3xl font-bold text-white">Comment ça marche ?</h2>
+            <img class="bg-white rounded-full p-2 w-20" src="./hackathonIMAGES/fonction-cognitive (1).png" alt="">
+        </div>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <div class="max-w-sm px-4 py-6 bg-white shadow-lg rounded-lg">
+                <div class="flex items-center justify-center">
+                    <h3 class="text-xl font-semibold text-[#119797]">1. Partagez votre expérience</h3>
+                    <img class="w-10 ml-2" src="./hackathonIMAGES/transfert-dexperience (2).png" alt="">
+                </div>
+                <p class="text-gray-600">En quelques clics, vous pouvez donner votre avis sur un hôpital ou une clinique. Il suffit de répondre à quelques questions précises et de décrire votre expérience de manière anonyme ou non.</p>
+            </div>
+            <div class="max-w-sm px-4 py-6 bg-white shadow-lg rounded-lg">
+                <div class="flex items-center justify-center">
+                    <h3 class="text-xl font-semibold text-[#119797]">2. Analyse et traitement des avis</h3>
+                    <img class="w-10 ml-2" src="./hackathonIMAGES/analyse-exploratoire.png" alt="">
+                </div>
+                <p class="text-gray-600">Nos algorithmes analysent les retours pour identifier les tendances et les points d’amélioration. Chaque avis est pris en compte pour créer un bilan fiable sur la qualité des soins.</p>
+            </div>
+            <div class="max-w-sm px-4 py-6 bg-white shadow-lg rounded-lg">
+                <div class="flex items-center justify-center">
+                    <h3 class="text-xl font-semibold text-[#119797]">3. Suivi des améliorations</h3>
+                    <img class="w-10 ml-2" src="./hackathonIMAGES/gestion-des-performances (1).png" alt="">
+                </div>
+                <p class="text-gray-600">Les établissements de santé reçoivent des rapports détaillés et peuvent ainsi ajuster leurs services en fonction des retours des patients. Vous pouvez également suivre l’évolution des améliorations grâce à notre plateforme.</p>
+            </div>
+            <div class="max-w-sm px-4 py-6 bg-white shadow-lg rounded-lg">
+                <div class="flex items-center-justify-center">
+                    <h3 class="text-xl font-semibold text-[#119797]">4. Participez à l’amélioration du système de santé</h3>
+                    <img class="w-10 h-10 ml-2" src="./hackathonIMAGES/avantage.png" alt="">
+                </div>
+                <p>Notre objectif est de créer un cercle vertueux où chaque patient contribue activement à l’amélioration du système de santé, tout en bénéficiant d’une prise en charge plus adaptée à ses attentes.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="testimonials" class="bg-white py-12 text-center">
+        <h2 class="text-3xl font-bold text-[#119797]">Témoignages</h2>
+        <div class="mt-8">
+            <div class="max-w-lg lg:w-full p-6 bg-white shadow-lg rounded-lg flex flex-col justify-center items-center gap-4 mx-auto">
+                <div class="bg-[#1197973a] p-4 rounded-lg border-[#119797] border">
+                    <p class="text-gray-600">"Grâce à Care Voice, j’ai pu exprimer mes préoccupations sur l’accueil dans mon hôpital de quartier. Quelques semaines plus tard, j’ai remarqué une nette amélioration du service ! C’est une vraie avancée pour les patients."</p>
+                    <h3 class="mt-4 font-semibold">— Awa K., patiente</h3>
+                </div>
+                <div class="bg-[#1197973a] p-4 rounded-lg border-[#119797] border">
+                    <p class="text-gray-600">"Je trouvais difficile d’être écouté lorsque je donnais mon avis en face-à-face. Avec cette plateforme, je peux partager mon expérience en toute confiance et anonymement. C’est motivant de voir que nos avis comptent vraiment."</p>
+                <h3 class="mt-4 font-semibold">—  Mamadou D., patiente</h3>
+                </div>
+                <div class="bg-[#1197973a] p-4 rounded-lg border-[#119797] border">
+                    <p class="text-gray-600">"J’ai utilisé Care Voice après mon hospitalisation et j’ai été agréablement surprise de voir les retours pris en compte. Mon hôpital a revu son système d’attente, et maintenant, les délais sont bien plus raisonnables !"</p>
+                <h3 class="mt-4 font-semibold">— Fatou B., patiente</h3>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>Chaque témoignage contribue à faire évoluer le système de santé pour le bien de tous. Rejoignez la communauté et faites entendre votre voix !</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#119797] bg-opacity-90 text-white text-center mt-4">
+        <div class="flex w-full justify-between">
+            <div class="text-center flex flex-col items-center border-r-2 m-2 h-40 w-1/2">
+                <p class="text-lg font-bold">Care Voice</p>
+                <img width="50px" src="../hackathonIMAGES/WhatsApp Image 2025-02-27 à 08.21.18_8091cfb8.jpg" alt="logo du site " class="mx-auto text-center">
+                <p class="italic text-sm">Mon hôpital, Mon avis</p>
+                <div class="flex gap-2 lg:gap-4 sm:mr-[10px] my-4">
+                    <img src="../hackathonIMAGES/facebook.png" class="w-5 h-5 invert" alt="">
+                    <img src="../hackathonIMAGES/tiktok.png" class="w-5 h-5 invert" alt="">
+                    <img src="../hackathonIMAGES/whatsapp.png" class="w-5 h-5 invert" alt="">
+                    <img src="../hackathonIMAGES/linkedin.png" class="w-5 h-5 invert" alt="">
+                </div><hr class="sm:hidden">
+            </div>
+            <div class="grid grid-rows-2 w-full lg:hidden">
+                <div class="flex justify-between p-2 items-center my-2 w-full border border-white !important">
+                    <h3 class="hover:underline">Contact</h3>
+                    <img class="hover:rounded-full hover:bg-[#1ca7a7] p-2" src="../hackathonIMAGES/down-arrow (1).png" alt="" id="deroulant1">
+                </div>
+                <div class="flex justify-between p-2 items-center my-2 w-full border border-white !important">
+                    <h3 class="hover:underline">Lien utiles</h3>
+                    <img class="hover:rounded-full hover:bg-[#1ca7a7] p-2" src="../hackathonIMAGES/down-arrow (1).png" alt="" id="deroulant2">
+                </div>
+            </div>
+            <div id="derouler1" class="hidden flex-col lg:flex">
+                <a href="#" class="font-semibold my-3 hover:underline">Accueil</a>
+                <a href="#" class="font-semibold my-3 hover:underline">Fonctionnalités</a>
+                <a href="#" class="font-semibold my-3 hover:underline">Contact</a>
+                <a href="#" class="font-semibold my-3 hover:underline">FAQ</a>
+            </div>
+            <div id="derouler2" class="flex-col my-3 hidden lg:block">
+                <h2 class="font-bold my-3">Contact & Support</h2>
+                <p class="my-3">•📍123 Rue de l'innovation, Abidjan </p>
+                <p class="my-3">•📞+225 01 02 03 04 05</p>
+                <p class="my-3">•📧support@carevoice.ci</p>
+            </div>
+        </div>
+        <div class="w-full bg-white text-black text-center py-4">
+            <p>&copy; 2025 Care Voice - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="./hackathonJS/accueil.js"></script>
+</body>
+</html>

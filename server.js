@@ -7,6 +7,7 @@ const path = require('path');
 
 connectDB();
 
+
 app.set('view engine', 'ejs'); 
 
 // Spécifier le dossier 'views' pour Express
