@@ -1,8 +1,95 @@
-<%- include("./partials/header") %>
-            <!-- Section principale -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AVENIR</title>
+        <link rel="icon" href="/Images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="/dist/styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
 
-            <main
-                class="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-8">
+    <body>
+
+        <header>
+            <section
+                class="relative bg-[#ff6f00] bg-cover bg-center bg-gradient-to-t from-[#FFB780] to-white">
+
+                <nav class="flex items-center justify-between p-5">
+                    <!-- Logo -->
+                    <a href="/index" class="flex items-center">
+                        <!-- Ajoutez le lien ici -->
+                        <h2
+                            class="font-extrabold text-[#ff6f00] text-2xl tracking-wider">
+                            AVENIR
+                        </h2>
+                        <img src="/Images/logo.png" alt="Logo"
+                            class="w-14 h-auto">
+                    </a>
+                    <!-- Checkbox caché pour afficher le menu -->
+                    <input type="checkbox" id="menuToggle" class="hidden peer">
+
+                    <!-- Bouton Burger -->
+                    <div class="block md:hidden">
+                        <label for="menuToggle"
+                            class="block p-2 px-4 border border-current rounded-lg cursor-pointer text-[#ff6f00]">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                    </div>
+
+                    <!-- Menu de navigation -->
+                    <div
+                        class="fixed inset-0 bg-white hidden peer-checked:flex flex-col items-center justify-center space-y-6 z-50">
+                        <!-- Bouton de fermeture -->
+                        <label for="menuToggle"
+                            class="absolute top-5 right-5 text-2xl font-semibold bg-[#ff6f00] p-2 rounded-xl cursor-pointer text-white">
+                            ✖
+                        </label>
+
+                        <a href="/post/connexion">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
+                                Connexion
+                            </button>
+                        </a>
+                        <hr class="w-3/4 border-t border-[#ff6f00]">
+
+                        <div class="flex items-center space-x-2 text-gray-800">
+                            <i
+                                class="fa-solid fa-magnifying-glass text-xl text-[#ff6f00]"></i>
+                            <h3 class="text-lg font-semibold">Rechercher par
+                                filière</h3>
+                        </div>
+
+                    </div>
+
+                    <!-- Boutons (S'orienter caché en mobile/tablette) -->
+                    <div class="hidden md:flex space-x-4">
+
+                        <a href="index">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
+                                Accueil
+                            </button>
+                        </a>
+                        <a href="/post/form">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold">S'inscrire</button>
+                        </a>
+
+                        <a href="/post/connexion">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
+                                Connexion
+                            </button>
+                        </a>
+                    </div>
+                </nav>
+            </section>
+
+            <section
+                class="pt-24 flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-8">
                 <!-- Texte & Formulaire -->
                 <div
                     class="w-full md:w-1/2 text-center md:text-left space-y-6">
@@ -51,421 +138,577 @@
                 <!-- Image -->
                 <div
                     class="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
-                    <img src="/Images/background_1.png"
+                    <img src="/Images/background_1.svg"
                         alt="Image de carrière"
                         class="w-10/12 sm:w-8/12 md:w-full max-w-sm md:max-w-full">
                 </div>
-            </main>
+            </section>
+        </header>
 
+        <main>
+            <!-- Section principale -->
 
-        <!-- premiere section avec les photos des universites -->
+            <!-- premiere section avec les photos des universites -->
 
-        <section class="container mx-auto p-4">
-            <!-- Titre -->
-            <div class="p-2">
-                <p
-                    class="font-bold text-xl text-gray-800 tracking-wide text-center">
-                    Plusieurs milliers d'écoles à votre disposition pour faire
-                    vos choix
-                </p>
-            </div>
-
-            <!-- Grille d'écoles -->
-            <div
-                class="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Carte école -->
-                <div class="w-full h-auto relative group">
-                    <!-- Icône de cœur à droite -->
-                    <div class="absolute top-3 right-3">
-                        <div class="p-2">
-                            <i class="fa-solid fa-heart text-black text-lg"></i>
-                        </div>
-                    </div>
-
-                    <!-- Image -->
-                    <img src="Images/university1.jpg" alt="Université"
-                        class="w-full h-80 object-cover rounded-3xl">
-
-                    <!-- Overlay bas -->
-                    <div
-                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                        <p class="text-sm font-medium">Description de
-                            l'image</p>
-                        <span class="text-sm text-gray-200">Une magnifique vue
-                            sur l'océan au coucher du soleil.</span>
-                    </div>
-
-                    <!-- Notes et Avis -->
-                    <div
-                        class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                        <!-- Étoile et avis -->
-                        <div class="text-yellow-400 flex items-center gap-x-2">
-                            <i class="fa-solid fa-star "></i>
-                            <h3 class="text-black font-medium">(10 avis)</h3>
-                        </div>
-                        <!-- Note -->
-                        <div
-                            class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                            Noté 4.8/5 par les élèves
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ecole 2 -->
-                <div class="w-full h-auto relative group">
-                    <div class="absolute top-3 right-3">
-                        <div class="p-2">
-                            <i class="fa-solid fa-heart text-black text-lg"></i>
-                        </div>
-                    </div>
-
-                    <img src="Images/university2.jpg" alt="Université"
-                        class="w-full h-80 object-cover rounded-3xl">
-
-                    <div
-                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                        <p class="text-sm font-medium">Description de
-                            l'image</p>
-                        <span class="text-sm text-gray-200">Un cadre idéal pour
-                            étudier.</span>
-                    </div>
-
-                    <div
-                        class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                        <div class="text-yellow-400 flex items-center gap-x-2">
-                            <i class="fa-solid fa-star"></i>
-                            <h3 class="text-black font-medium">(12 avis)</h3>
-                        </div>
-                        <div
-                            class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                            Noté 4.9/5 par les élèves
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ecole 3 -->
-                <div class="w-full h-auto relative group">
-                    <div class="absolute top-3 right-3">
-                        <div class="p-2">
-                            <i class="fa-solid fa-heart text-black text-lg"></i>
-                        </div>
-                    </div>
-
-                    <img src="Images/university3.jpg" alt="Université"
-                        class="w-full h-80 object-cover rounded-3xl">
-
-                    <div
-                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                        <p class="text-sm font-medium">Description de
-                            l'image</p>
-                        <span class="text-sm text-gray-200">Une université
-                            moderne avec des équipements de pointe.</span>
-                    </div>
-
-                    <div
-                        class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                        <div class="text-yellow-400 flex items-center gap-x-2">
-                            <i class="fa-solid fa-star"></i>
-                            <h3 class="text-black font-medium">(8 avis)</h3>
-                        </div>
-                        <div
-                            class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                            Noté 4.7/5 par les élèves
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ecole 4 -->
-                <div class="w-full h-auto relative group top-5">
-                    <div class="absolute top-3 right-3">
-                        <div class="p-2">
-                            <i
-                                class="fa-solid fa-heart text-black text-lg"></i>
-                        </div>
-                    </div>
-
-                    <img src="Images/university4.jpg" alt="Université"
-                        class="w-full h-80 object-cover rounded-3xl">
-
-                    <div
-                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                        <p class="text-sm font-medium">Description de
-                            l'image</p>
-                        <span class="text-sm text-gray-200">Une université
-                            moderne avec des équipements de pointe.</span>
-                    </div>
-
-                    <div
-                        class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                        <div class="text-yellow-400 flex items-center gap-x-2">
-                            <i class="fa-solid fa-star"></i>
-                            <h3 class="text-black font-medium">(8 avis)</h3>
-                        </div>
-                        <div
-                            class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                            Noté 4.7/5 par les élèves
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ecole 5 -->
-                <div class="w-full h-auto relative group top-5">
-                    <div class="absolute top-3 right-3">
-                        <div class="p-2">
-                            <i
-                                class="fa-solid fa-heart text-black text-lg"></i>
-                        </div>
-                    </div>
-
-                    <img src="Images/university5.jpg" alt="Université"
-                        class="w-full h-80 object-cover rounded-3xl">
-
-                    <div
-                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                        <p class="text-sm font-medium">Description de
-                            l'image</p>
-                        <span class="text-sm text-gray-200">Une université
-                            moderne avec des équipements de pointe.</span>
-                    </div>
-
-                    <div
-                        class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                        <div class="text-yellow-400 flex items-center gap-x-2">
-                            <i class="fa-solid fa-star"></i>
-                            <h3 class="text-black font-medium">(8 avis)</h3>
-                        </div>
-                        <div
-                            class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                            Noté 4.7/5 par les élèves
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ecole 6 -->
-                <div class="w-full h-auto relative group top-5">
-                    <div class="absolute top-3 right-3">
-                        <div class="p-2">
-                            <i
-                                class="fa-solid fa-heart text-black text-lg"></i>
-                        </div>
-                    </div>
-
-                    <img src="Images/university6.jpg" alt="Université"
-                        class="w-full h-80 object-cover rounded-3xl">
-
-                    <div
-                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                        <p class="text-sm font-medium">Description de
-                            l'image</p>
-                        <span class="text-sm text-gray-200">Une université
-                            moderne avec des équipements de pointe.</span>
-                    </div>
-
-                    <div
-                        class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                        <div class="text-yellow-400 flex items-center gap-x-2">
-                            <i class="fa-solid fa-star"></i>
-                            <h3 class="text-black font-medium">(8 avis)</h3>
-                        </div>
-                        <div
-                            class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                            Noté 4.7/5 par les élèves
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- deuxieme section avec le chatbot -->
-
-        <section class="p-8 m-5 ">
-            <div
-                class="max-w-full overflow-hidden flex flex-col md:flex-row">
-
-                <!-- Partie gauche : texte et image du chatbot -->
-                <div
-                    class="w-full md:w-2/3 flex flex-col justify-between mb-8 md:mb-0">
-
-                    <div class="mb-4">
-
-                        <h1 class="mb-4 text-2xl font-bold text-gray-800">
-                            Le conseiller par excellence !</h1>
-                        <p
-                            class="mb-8 text-left text-gray-600 font-[buenos aires] font-semibold leading-7">
-                            Notre chatbot est bien plus qu’un simple guide :
-                            c’est
-                            un véritable expert de l’orientation.
-
-                            <br><span class="w-3 h-3 bg-orange-500 rounded-full inline-block"></span> Déjà adopté par de nombreux étudiants, il les
-                            a
-                            aidés
-                            à trouver la voie qui leur correspond en leur
-                            proposant
-                            des métiers d’avenir et les meilleures formations
-                            adaptées.
-
-                            <br> <span class="w-3 h-3 bg-orange-500 rounded-full inline-block"></span> Toi aussi, fais le bon choix ! Discute avec
-                            notre
-                            chatbot et construis dès aujourd’hui ton avenir
-                            professionnel. 🚀
-                        </p>
-                    </div>
-
-                    <!-- Image du chatbot -->
-                    <div class="mt-2 flex justify-center mb-14 ">
-                        <img src="Images/chatbot.png" alt="Chatbot"
-                            class="w-8/12 h-auto max-w-full" />
-                    </div>
-                </div>
-
-                <!-- Partie droite : deux cartes -->
-                <div class="w-full md:w-1/3 flex flex-col gap-6">
-
-                    <!-- Carte 1 -->
-                    <div class="p-6 rounded-lg bg-[#1E3A8A]"
-                        style="max-width: 350px;">
-
-                        <div class="flex items-center mb-4">
-                            <div class="ml-3 text-center">
-                                <h3
-                                    class="font-semibold text-white text-center">💡
-                                    Ton
-                                    futur commence ici !</h3>
-                            </div>
-                        </div>
-
-                        <p class="mb-6 text-white">
-                            Tu hésites sur ton orientation ? Ne perds plus de
-                            temps ! Notre chatbot intelligent t’aide à découvrir
-                            les métiers d’avenir et les formations adaptées à
-                            ton profil. Pose tes questions, explore tes options
-                            et trouve ta voie en quelques clics.
-                        </p>
-
-                        <div
-                            class="inline-block px-4 py-2 bg-white rounded-full">
-                            <div class="flex items-center ">
-
-                                <button
-                                    class="mr-2 text-sm font-semibold text-gray-800 ">Essaie-le
-                                    maintenant et donne un coup d’accélérateur à
-                                    ton avenir</button>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Carte 2 -->
-                    <div class="p-6 rounded-lg bg-green-100"
-                        style="max-width: 350px;">
-                        <div class="flex items-center mb-4">
-                            <div class="ml-3">
-                                <h3
-                                    class="font-semibold text-gray-800 text-center">🔍
-                                    Un doute sur ton orientation ? On a la
-                                    solution !</h3>
-                            </div>
-                        </div>
-
-                        <p class="mb-6 text-gray-800">
-                            Notre chatbot est là pour toi ! Que tu sois en quête
-                            d’inspiration ou déjà fixé sur un domaine, il
-                            t’accompagne dans ton choix en te proposant :
-                            <br> <span class="mx-2">•</span> Des métiers
-                            d’avenir avec de grandes
-                            opportunités
-                            <br> <span class="mx-2">•</span> Des écoles adaptées
-                            à ton profil
-                            <br><span class="mx-2">•</span> Des conseils
-                            personnalisés
-                        </p>
-
-                        <div
-                            class="inline-block px-4 py-2 bg-white rounded-full">
-                            <div class="flex items-center">
-                                <button
-                                    class="mr-2 text-sm font-semibold text-gray-800">
-                                    Discute avec lui dès maintenant et construis
-                                    ton avenir en toute confiance !</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 3eme section -->
-
-        <section class="p-6 m-5 bg-gray-100 rounded-lg">
-            <div class="max-w-6xl mx-auto">
+            <section class="container mx-auto p-4">
                 <!-- Titre -->
-                <h2
-                    class="mb-12 text-4xl font-bold text-center text-gray-800 font-[buenos aires]">
-                    Trouvez votre voie avec nos guides d’orientation
-                </h2>
+                <div class="p-2">
+                    <p
+                        class="font-bold text-xl text-gray-800 tracking-wide text-center">
+                        Plusieurs milliers d'écoles à votre disposition pour
+                        faire
+                        vos choix
+                    </p>
+                </div>
 
-                <!-- Grille des guides -->
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <!-- Guide 1 -->
-                    <div class="p-5 bg-white rounded-lg shadow-md">
-                        <h3
-                            class="text-xl font-semibold text-gray-800 font-serif">
-                            Les métiers d’avenir : lesquels choisir ?
-                        </h3>
-                        <p class="text-gray-600 font-[montserrat] text-xl">
-                            Découvrez les secteurs qui recrutent et les
-                            formations pour y accéder !
-                        </p>
+                <!-- Grille d'écoles -->
+                <div
+                    class="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Carte école -->
+                    <div class="w-full h-auto relative group">
+                        <!-- Icône de cœur à droite -->
+                        <div class="absolute top-3 right-3">
+                            <div class="p-2">
+                                <i
+                                    class="fa-solid fa-heart text-black text-lg"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <img src="Images/university1.jpg" alt="Université"
+                            class="w-full h-80 object-cover rounded-3xl">
+
+                        <!-- Overlay bas -->
                         <div
-                            class="flex items-center text-sm text-gray-500 mt-2">
-                            <span>Mars 2025</span>
-                            <span class="mx-2">•</span>
-                            <span>10 minutes de lecture</span>
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
+                            <p class="text-sm font-medium">Description de
+                                l'image</p>
+                            <span class="text-sm text-gray-200">Une magnifique
+                                vue
+                                sur l'océan au coucher du soleil.</span>
+                        </div>
+
+                        <!-- Notes et Avis -->
+                        <div
+                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
+                            <!-- Étoile et avis -->
+                            <div
+                                class="text-yellow-400 flex items-center gap-x-2">
+                                <i class="fa-solid fa-star "></i>
+                                <h3 class="text-black font-medium">(10
+                                    avis)</h3>
+                            </div>
+                            <!-- Note -->
+                            <div
+                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
+                                Noté 4.8/5 par les élèves
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Guide 2 -->
-                    <div class="p-5 bg-white rounded-lg shadow-md">
-                        <h3
-                            class="text-xl font-semibold text-gray-800 font-serif">
-                            Comment bien choisir son orientation après le bac ?
-                        </h3>
-                        <p class="text-gray-600 font-[montserrat] text-xl">
-                            Un guide pratique pour t’aider à prendre la
-                            meilleure décision selon tes envies et tes
-                            compétences.
-                        </p>
+                    <!-- Ecole 2 -->
+                    <div class="w-full h-auto relative group">
+                        <div class="absolute top-3 right-3">
+                            <div class="p-2">
+                                <i
+                                    class="fa-solid fa-heart text-black text-lg"></i>
+                            </div>
+                        </div>
+
+                        <img src="Images/university2.jpg" alt="Université"
+                            class="w-full h-80 object-cover rounded-3xl">
+
                         <div
-                            class="flex items-center text-sm text-gray-500 mt-2">
-                            <span>Mars 2025</span>
-                            <span class="mx-2">•</span>
-                            <span>12 minutes de lecture</span>
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
+                            <p class="text-sm font-medium">Description de
+                                l'image</p>
+                            <span class="text-sm text-gray-200">Un cadre idéal
+                                pour
+                                étudier.</span>
+                        </div>
+
+                        <div
+                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
+                            <div
+                                class="text-yellow-400 flex items-center gap-x-2">
+                                <i class="fa-solid fa-star"></i>
+                                <h3 class="text-black font-medium">(12
+                                    avis)</h3>
+                            </div>
+                            <div
+                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
+                                Noté 4.9/5 par les élèves
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Guide 3 -->
-                    <div class="p-5 bg-white rounded-lg shadow-md">
-                        <h3
-                            class="text-xl font-semibold text-gray-800 font-serif">
-                            Orientation 2.0 : notre chatbot à votre service !
-                        </h3>
-                        <p class="text-gray-600 font-[montserrat] text-xl">
-                            Découvrez comment notre chatbot peut vous aider à
-                            trouver votre futur métier en quelques minutes.
-                        </p>
+                    <!-- ecole 3 -->
+                    <div class="w-full h-auto relative group">
+                        <div class="absolute top-3 right-3">
+                            <div class="p-2">
+                                <i
+                                    class="fa-solid fa-heart text-black text-lg"></i>
+                            </div>
+                        </div>
+
+                        <img src="Images/university3.jpg" alt="Université"
+                            class="w-full h-80 object-cover rounded-3xl">
+
                         <div
-                            class="flex items-center text-sm text-gray-500 mt-2">
-                            <span>Mars 2025</span>
-                            <span class="mx-2">•</span>
-                            <span>8 minutes de lecture</span>
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
+                            <p class="text-sm font-medium">Description de
+                                l'image</p>
+                            <span class="text-sm text-gray-200">Une université
+                                moderne avec des équipements de pointe.</span>
+                        </div>
+
+                        <div
+                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
+                            <div
+                                class="text-yellow-400 flex items-center gap-x-2">
+                                <i class="fa-solid fa-star"></i>
+                                <h3 class="text-black font-medium">(8 avis)</h3>
+                            </div>
+                            <div
+                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
+                                Noté 4.7/5 par les élèves
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ecole 4 -->
+                    <div class="w-full h-auto relative group top-5">
+                        <div class="absolute top-3 right-3">
+                            <div class="p-2">
+                                <i
+                                    class="fa-solid fa-heart text-black text-lg"></i>
+                            </div>
+                        </div>
+
+                        <img src="Images/university4.jpg" alt="Université"
+                            class="w-full h-80 object-cover rounded-3xl">
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
+                            <p class="text-sm font-medium">Description de
+                                l'image</p>
+                            <span class="text-sm text-gray-200">Une université
+                                moderne avec des équipements de pointe.</span>
+                        </div>
+
+                        <div
+                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
+                            <div
+                                class="text-yellow-400 flex items-center gap-x-2">
+                                <i class="fa-solid fa-star"></i>
+                                <h3 class="text-black font-medium">(8 avis)</h3>
+                            </div>
+                            <div
+                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
+                                Noté 4.7/5 par les élèves
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ecole 5 -->
+                    <div class="w-full h-auto relative group top-5">
+                        <div class="absolute top-3 right-3">
+                            <div class="p-2">
+                                <i
+                                    class="fa-solid fa-heart text-black text-lg"></i>
+                            </div>
+                        </div>
+
+                        <img src="Images/university5.jpg" alt="Université"
+                            class="w-full h-80 object-cover rounded-3xl">
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
+                            <p class="text-sm font-medium">Description de
+                                l'image</p>
+                            <span class="text-sm text-gray-200">Une université
+                                moderne avec des équipements de pointe.</span>
+                        </div>
+
+                        <div
+                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
+                            <div
+                                class="text-yellow-400 flex items-center gap-x-2">
+                                <i class="fa-solid fa-star"></i>
+                                <h3 class="text-black font-medium">(8 avis)</h3>
+                            </div>
+                            <div
+                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
+                                Noté 4.7/5 par les élèves
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ecole 6 -->
+                    <div class="w-full h-auto relative group top-5">
+                        <div class="absolute top-3 right-3">
+                            <div class="p-2">
+                                <i
+                                    class="fa-solid fa-heart text-black text-lg"></i>
+                            </div>
+                        </div>
+
+                        <img src="Images/university6.jpg" alt="Université"
+                            class="w-full h-80 object-cover rounded-3xl">
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
+                            <p class="text-sm font-medium">Description de
+                                l'image</p>
+                            <span class="text-sm text-gray-200">Une université
+                                moderne avec des équipements de pointe.</span>
+                        </div>
+
+                        <div
+                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
+                            <div
+                                class="text-yellow-400 flex items-center gap-x-2">
+                                <i class="fa-solid fa-star"></i>
+                                <h3 class="text-black font-medium">(8 avis)</h3>
+                            </div>
+                            <div
+                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
+                                Noté 4.7/5 par les élèves
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- deuxieme section avec le chatbot -->
+
+            <section class="p-8 m-5 ">
+                <div
+                    class="max-w-full overflow-hidden flex flex-col md:flex-row">
+
+                    <!-- Partie gauche : texte et image du chatbot -->
+                    <div
+                        class="w-full md:w-2/3 flex flex-col justify-between mb-8 md:mb-0">
+
+                        <div class="mb-4">
+
+                            <h1 class="mb-4 text-2xl font-bold text-gray-800">
+                                Le conseiller par excellence !</h1>
+                            <p
+                                class="mb-8 text-left text-gray-600 font-[buenos aires] font-semibold leading-7">
+                                Notre chatbot est bien plus qu’un simple guide :
+                                c’est
+                                un véritable expert de l’orientation.
+
+                                <br><span
+                                    class="w-3 h-3 bg-orange-500 rounded-full inline-block"></span>
+                                Déjà adopté par de nombreux étudiants, il les
+                                a
+                                aidés
+                                à trouver la voie qui leur correspond en leur
+                                proposant
+                                des métiers d’avenir et les meilleures
+                                formations
+                                adaptées.
+
+                                <br> <span
+                                    class="w-3 h-3 bg-orange-500 rounded-full inline-block"></span>
+                                Toi aussi, fais le bon choix ! Discute avec
+                                notre
+                                chatbot et construis dès aujourd’hui ton avenir
+                                professionnel. 🚀
+                            </p>
+                        </div>
+
+                        <!-- Image du chatbot -->
+                        <div class="mt-2 flex justify-center mb-14 ">
+                            <img src="Images/chatbot.png" alt="Chatbot"
+                                class="w-8/12 h-auto max-w-full" />
+                        </div>
+                    </div>
+
+                    <!-- Partie droite : deux cartes -->
+                    <div class="w-full md:w-1/3 flex flex-col gap-6">
+
+                        <!-- Carte 1 -->
+                        <div class="p-6 rounded-lg bg-[#1E3A8A]"
+                            style="max-width: 350px;">
+
+                            <div class="flex items-center mb-4">
+                                <div class="ml-3 text-center">
+                                    <h3
+                                        class="font-semibold text-white text-center">💡
+                                        Ton
+                                        futur commence ici !</h3>
+                                </div>
+                            </div>
+
+                            <p class="mb-6 text-white">
+                                Tu hésites sur ton orientation ? Ne perds plus
+                                de
+                                temps ! Notre chatbot intelligent t’aide à
+                                découvrir
+                                les métiers d’avenir et les formations adaptées
+                                à
+                                ton profil. Pose tes questions, explore tes
+                                options
+                                et trouve ta voie en quelques clics.
+                            </p>
+
+                            <div
+                                class="inline-block px-4 py-2 bg-white rounded-full">
+                                <div class="flex items-center ">
+
+                                    <button
+                                        class="mr-2 text-sm font-semibold text-gray-800 ">Essaie-le
+                                        maintenant et donne un coup
+                                        d’accélérateur à
+                                        ton avenir</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte 2 -->
+                        <div class="p-6 rounded-lg bg-green-100"
+                            style="max-width: 350px;">
+                            <div class="flex items-center mb-4">
+                                <div class="ml-3">
+                                    <h3
+                                        class="font-semibold text-gray-800 text-center">🔍
+                                        Un doute sur ton orientation ? On a la
+                                        solution !</h3>
+                                </div>
+                            </div>
+
+                            <p class="mb-6 text-gray-800">
+                                Notre chatbot est là pour toi ! Que tu sois en
+                                quête
+                                d’inspiration ou déjà fixé sur un domaine, il
+                                t’accompagne dans ton choix en te proposant :
+                                <br> <span class="mx-2">•</span> Des métiers
+                                d’avenir avec de grandes
+                                opportunités
+                                <br> <span class="mx-2">•</span> Des écoles
+                                adaptées
+                                à ton profil
+                                <br><span class="mx-2">•</span> Des conseils
+                                personnalisés
+                            </p>
+
+                            <div
+                                class="inline-block px-4 py-2 bg-white rounded-full">
+                                <div class="flex items-center">
+                                    <button
+                                        class="mr-2 text-sm font-semibold text-gray-800">
+                                        Discute avec lui dès maintenant et
+                                        construis
+                                        ton avenir en toute confiance !</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3eme section -->
+
+            <section class="p-6 m-5 bg-gray-100 rounded-lg">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Titre -->
+                    <h2
+                        class="mb-12 text-4xl font-bold text-center text-gray-800 font-[buenos aires]">
+                        Trouvez votre voie avec nos guides d’orientation
+                    </h2>
+
+                    <!-- Grille des guides -->
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        <!-- Guide 1 -->
+                        <div class="p-5 bg-white rounded-lg shadow-md">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 font-serif">
+                                Les métiers d’avenir : lesquels choisir ?
+                            </h3>
+                            <p class="text-gray-600 font-[montserrat] text-xl">
+                                Découvrez les secteurs qui recrutent et les
+                                formations pour y accéder !
+                            </p>
+                            <div
+                                class="flex items-center text-sm text-gray-500 mt-2">
+                                <span>Mars 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>10 minutes de lecture</span>
+                            </div>
+                        </div>
+
+                        <!-- Guide 2 -->
+                        <div class="p-5 bg-white rounded-lg shadow-md">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 font-serif">
+                                Comment bien choisir son orientation après le
+                                bac ?
+                            </h3>
+                            <p class="text-gray-600 font-[montserrat] text-xl">
+                                Un guide pratique pour t’aider à prendre la
+                                meilleure décision selon tes envies et tes
+                                compétences.
+                            </p>
+                            <div
+                                class="flex items-center text-sm text-gray-500 mt-2">
+                                <span>Mars 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>12 minutes de lecture</span>
+                            </div>
+                        </div>
+
+                        <!-- Guide 3 -->
+                        <div class="p-5 bg-white rounded-lg shadow-md">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 font-serif">
+                                Orientation 2.0 : notre chatbot à votre service
+                                !
+                            </h3>
+                            <p class="text-gray-600 font-[montserrat] text-xl">
+                                Découvrez comment notre chatbot peut vous aider
+                                à
+                                trouver votre futur métier en quelques minutes.
+                            </p>
+                            <div
+                                class="flex items-center text-sm text-gray-500 mt-2">
+                                <span>Mars 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>8 minutes de lecture</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <%- include("./partials/footer") %>
+            </section>
+        </main>
 
-    
+        <footer id="footer" class="relative bg-[#ff6f00] text-white mt-20">
+            <!-- Élément de vagues -->
+            <div class="absolute top-5 left-0 w-full h-auto"
+                style="transform: translateY(-100%)">
+                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s"
+                    viewBox="0 0 1440 100" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"><defs><lineargradient
+                            id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop
+                                stop-color="rgba(255, 111, 0, 1)"
+                                offset="0%"></stop><stop
+                                stop-color="rgba(255, 111, 0, 1)"
+                                offset="100%"></stop></lineargradient></defs><path
+                        style="transform:translate(0, 0px); opacity:1"
+                        fill="url(#sw-gradient-0)"
+                        d="M0,10L34.3,11.7C68.6,13,137,17,206,21.7C274.3,27,343,33,411,31.7C480,30,549,20,617,13.3C685.7,7,754,3,823,11.7C891.4,20,960,40,1029,50C1097.1,60,1166,60,1234,51.7C1302.9,43,1371,27,1440,30C1508.6,33,1577,57,1646,66.7C1714.3,77,1783,73,1851,66.7C1920,60,1989,50,2057,43.3C2125.7,37,2194,33,2263,28.3C2331.4,23,2400,17,2469,20C2537.1,23,2606,37,2674,40C2742.9,43,2811,37,2880,35C2948.6,33,3017,37,3086,31.7C3154.3,27,3223,13,3291,15C3360,17,3429,33,3497,43.3C3565.7,53,3634,57,3703,60C3771.4,63,3840,67,3909,68.3C3977.1,70,4046,70,4114,70C4182.9,70,4251,70,4320,61.7C4388.6,53,4457,37,4526,26.7C4594.3,17,4663,13,4731,16.7C4800,20,4869,30,4903,35L4937.1,40L4937.1,100L4902.9,100C4868.6,100,4800,100,4731,100C4662.9,100,4594,100,4526,100C4457.1,100,4389,100,4320,100C4251.4,100,4183,100,4114,100C4045.7,100,3977,100,3909,100C3840,100,3771,100,3703,100C3634.3,100,3566,100,3497,100C3428.6,100,3360,100,3291,100C3222.9,100,3154,100,3086,100C3017.1,100,2949,100,2880,100C2811.4,100,2743,100,2674,100C2605.7,100,2537,100,2469,100C2400,100,2331,100,2263,100C2194.3,100,2126,100,2057,100C1988.6,100,1920,100,1851,100C1782.9,100,1714,100,1646,100C1577.1,100,1509,100,1440,100C1371.4,100,1303,100,1234,100C1165.7,100,1097,100,1029,100C960,100,891,100,823,100C754.3,100,686,100,617,100C548.6,100,480,100,411,100C342.9,100,274,100,206,100C137.1,100,69,100,34,100L0,100Z">
+
+                    </path>
+                </svg>
+            </div>
+
+            <!-- Contenu du footer -->
+            <div class="container mx-auto px-6 pt-10 pb-6">
+                <div class="flex flex-wrap justify-between">
+
+                    <div class="flex w-full md:w-1/4 mb-6 ">
+
+                        <h2
+                            class="font-bold text-white text-2xl tracking-wider w-10 h-4">
+                            AVENIR
+                        </h2>
+                        <img src="/Images/logo.png"
+                            alt="Logo Petit Écran"
+                            class="w-20 h-16 ml-12 -mt-5">
+                    </div>
+
+                    <!-- Colonne 2 -->
+                    <div class="w-full md:w-1/4 mb-6">
+                        <h5 class="text-xl font-bold mb-4">Nos Services</h5>
+                        <ul class="list-none ">
+                            <li class="mb-2"><a href="#"
+                                    class="font-bold">Orientation
+                                    personnalisée</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="font-bold">Chatbot d’aide à
+                                    l’orientation</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="font-bold">Accès aux
+                                    meilleures formations</a></li>
+                            <li class="mb-2"><a href="#"
+                                    class="font-bold">Conseils métiers
+                                    et débouchés</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 3 -->
+                    <div class="w-full md:w-1/4 mb-6">
+                        <h5 class="text-xl font-bold mb-4">Contact</h5>
+                        <ul class="list-none">
+                            <li class="mb-2 font-bold">Email:
+                                avenir@plus.com</li>
+                            <li class="mb-2 font-bold">Téléphone: +225 00 00 00
+                                00</li>
+                            <li class="mb-2 font-bold">Adresse: Abidjan Rivera
+                                bonoumin
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 4 -->
+                    <div class="w-full md:w-1/4 mb-6">
+                        <h5 class="text-xl font-bold mb-4">Suivez-nous</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hover:text-indigo-300">
+                                <span class="sr-only">Facebook</span>
+                                <svg class="h-6 w-6" fill="currentColor"
+                                    viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#" class="hover:text-indigo-300">
+                                <span class="sr-only">Instagram</span>
+                                <svg class="h-6 w-6" fill="currentColor"
+                                    viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.299.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.808.045.975.207 1.504.344 1.857.182.467.398.8.748 1.15.35.35.683.566 1.15.748.353.137.882.299 1.857.344 1.023.047 1.351.058 3.808.058h.468c2.456 0 2.784-.011 3.808-.058.975-.045 1.504-.207 1.857-.344.467-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.299-.882.344-1.857.047-1.023.058-1.351.058-3.808v-.468c0-2.456-.011-2.784-.058-3.808-.045-.975-.207-1.504-.344-1.857-.182-.467-.398-.8-.748-1.15-.35-.35-.683-.566-1.15-.748-.353-.137-.882-.299-1.857-.344-1.023-.047-1.351-.058-3.808-.058zm0 3.874a3.128 3.128 0 1 0 0 6.255 3.128 3.128 0 0 0 0-6.255zm0 5.61a2.482 2.482 0 1 1 0-4.964 2.482 2.482 0 0 1 0 4.964zm5.508-5.61a.91.91 0 1 0 0 1.823.91.91 0 0 0 0-1.823z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+
+                            <a href="#" class="hover:text-indigo-300">
+                                <span class="sr-only">LinkedIn</span>
+                                <svg class="h-6 w-6"
+                                    xmlns="http://www.w3.org/2000/svg" x="0px"
+                                    y="0px"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#ffffff" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1"
+                                        stroke-linecap="butt"
+                                        stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray
+                                        stroke-dashoffset="0" font-family="none"
+                                        font-weight="none" font-size="none"
+                                        text-anchor="none"
+                                        style="mix-blend-mode: normal"><g
+                                            transform="scale(5.12,5.12)"><path
+                                                d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z"></path></g></g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="mt-8 border-t border-white pt-6 text-center">
+                    <p>&copy; 2025 Votre Entreprise. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
