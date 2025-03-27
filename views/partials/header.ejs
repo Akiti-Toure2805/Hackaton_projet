@@ -10,68 +10,97 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
-    <section class="relative bg-[#ff6f00] bg-cover bg-center bg-gradient-to-t from-[#FFB780] to-white">
-    
-        <header>
-            <nav class="flex items-center justify-between p-5">
-                <!-- Logo -->
-                <a href="/index" class="flex items-center"> <!-- Ajoutez le lien ici -->
-                    <h2 class="font-extrabold text-[#ff6f00] text-2xl tracking-wider">
-                        AVENIR
-                    </h2>
-                    <img src="/Images/logo.png" alt="Logo" class="w-14 h-auto">
-                </a>
-                <!-- Checkbox caché pour afficher le menu -->
-                <input type="checkbox" id="menuToggle" class="hidden peer">
+    <body>
 
-                <!-- Bouton Burger -->
-                <div class="block md:hidden">
-                    <label for="menuToggle" class="block p-2 px-4 border border-current rounded-lg cursor-pointer text-[#ff6f00]">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                </div>
+        <section
+            class="">
+            <header class="relative bg-[#ff6f00] bg-cover bg-center bg-gradient-to-t from-[#FFB780] to-white">
 
-                <!-- Menu de navigation -->
-                <div class="fixed inset-0 bg-white hidden peer-checked:flex flex-col items-center justify-center space-y-6 z-50">
-                    <!-- Bouton de fermeture -->
-                    <label for="menuToggle" class="absolute top-5 right-5 text-2xl font-semibold bg-[#ff6f00] p-2 rounded-xl cursor-pointer text-white">
-                        ✖
-                    </label>
-
-                    <a href="/post/connexion">
-                        <button class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
-                            Connexion
-                        </button>
+                <nav class="flex items-center justify-between p-5">
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center">
+                        <!-- Ajoutez le lien ici -->
+                        <h2
+                            class="font-extrabold text-[#ff6f00] text-2xl tracking-wider">
+                            AVENIR
+                        </h2>
+                        <img src="/Images/logo.png" alt="Logo"
+                            class="w-14 h-auto">
                     </a>
-                    <hr class="w-3/4 border-t border-[#ff6f00]">
+                    <!-- Checkbox caché pour afficher le menu -->
+                    <input type="checkbox" id="menuToggle" class="hidden peer">
 
-                    <div class="flex items-center space-x-2 text-gray-800">
-                        <i class="fa-solid fa-magnifying-glass text-xl text-[#ff6f00]"></i>
-                        <h3 class="text-lg font-semibold">Rechercher par filière</h3>
+                    <!-- Bouton Burger -->
+                    <div class="block md:hidden">
+                        <label for="menuToggle"
+                            class="block p-2 px-4 border border-current rounded-lg cursor-pointer text-[#ff6f00]">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
                     </div>
 
-                </div>
+                    <!-- Menu de navigation -->
+                    <div
+                        class="fixed inset-0 bg-white hidden peer-checked:flex flex-col items-center justify-center space-y-6 z-50">
+                        <!-- Bouton de fermeture -->
+                        <label for="menuToggle"
+                            class="absolute top-5 right-5 text-2xl font-semibold bg-[#ff6f00] p-2 rounded-xl cursor-pointer text-white">
+                            ✖
+                        </label>
 
-                <!-- Boutons (S'orienter caché en mobile/tablette) -->
-                <div class="hidden md:flex space-x-4">
+                        <a href="#">
+                            <button
+                                class="bg-[#ff6f00] rounded-lg p-2 w-32 text-black font-bold hover:bg-transparent transition-colors duration-300 ease-in-out">
+                               Test d'orientation
+                            </button>
+                        </a>
 
+                        <a href="/post/form">
+                            <button
+                                class="bg-[#ff6f00] rounded-lg p-2 w-32 text-black font-bold hover:bg-transparent transition-colors duration-300 ease-in-out">
+                                S'inscrire
+                            </button>
+                        </a>
 
-                    <a href="index">
-                        <button class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
-                            Accueil
-                        </button>
-                    </a>
-                    <a href="/post/form">
-                        <button class="bg-transparent rounded-2xl p-2 text-black font-bold">S'inscrire</button>
-                    </a>
-                    
-                    
-                    <a href="/post/connexion">
-                        <button class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
-                            Connexion
-                        </button>
-                    </a>                
-                </div>
-            </nav>
-        </header>
-    </section>
+                        <a href="/post/connexion">
+                            <button
+                                class="bg-[#ff6f00] rounded-lg p-2 w-32 text-black font-bold hover:bg-transparent transition-colors duration-300 ease-in-out">
+                                Connexion
+                            </button>
+                        </a>
+                        <hr class="w-3/4 border-t border-[#ff6f00]">
+
+                        
+
+                    </div>
+
+                    <!-- Boutons (S'orienter caché en mobile/tablette) -->
+                    <div class="hidden md:flex space-x-4">
+
+                        <a href="/" class="nav-link">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
+                                Accueil
+                            </button>
+                        </a>
+
+                        <a href="#" class="nav-link">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">Test d'orientation</button>
+                        </a>
+
+                        <a href="/post/form" class="nav-link">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">S'inscrire</button>
+                        </a>
+
+                        <a href="/post/connexion" class="nav-link">
+                            <button
+                                class="bg-transparent rounded-2xl p-2 text-black font-bold hover:bg-[#ff6f00] transition-colors duration-300 ease-in-out">
+                                Connexion
+                            </button>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+            <script src="/script.js"></script>
