@@ -1,5 +1,5 @@
 const express = require("express"); 
-const { setPosts } = require("../controllers/post.controllers");
+const { setPosts, getForm, getConnexion } = require("../controllers/post.controllers");
 const router = express.Router();
 
 //recuperer tous les articles

@@ -6,9 +6,9 @@ module.exports.getPosts = async (req, res) => {
 }; 
 
 // afficher ma vue du formulaire
-module.exports.getForm = async (req, res) => {
-    res.render('form/formulaire');
-};
+// module.exports.getForm = async (req, res) => {
+//     res.render('form/formulaire');
+// };
 
 // afficher la vue de la connexion
 module.exports.getConnexion = async (req, res) => { 
@@ -71,7 +71,7 @@ module.exports.editPost = async (req, res) => {
 
 module.exports.getForm = async(req, res) => {
     try{
-        res.render('form', {})
+        res.render('form/formulaire', {})
     } catch (error) {
         res.status(500).json({ message: "erreur de serveur", error });
     }
