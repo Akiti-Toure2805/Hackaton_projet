@@ -5,6 +5,8 @@ const port = 7001;
 const app = express();
 const path = require('path');
 
+const chatbot = require('./routes/chatbot');
+
 connectDB();
 
 
@@ -12,6 +14,10 @@ app.set('view engine', 'ejs');
 
 // Spécifier le dossier 'views' pour Express
 app.set('views', path.join(__dirname, 'views'));
+
+
+// Ajouter la route chatbot
+app.use("/api", chatbot);
 
 
 // Middleware pour parser le corps des requêtes en JSON

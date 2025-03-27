@@ -5,6 +5,17 @@ module.exports.getPosts = async (req, res) => {
     res.render('index',{posts})
 }; 
 
+// afficher ma vue du formulaire
+module.exports.getForm = async (req, res) => {
+    res.render('form/formulaire');
+};
+
+// afficher la vue de la connexion
+module.exports.getConnexion = async (req, res) => { 
+    res.render('form/connexion');
+};
+
+
 
 // Trouver un article grace à son id
 module.exports.getPostsById = async (req, res) => {
