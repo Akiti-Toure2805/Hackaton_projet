@@ -59,33 +59,6 @@ module.exports.getPostsById = async (req, res) => {
 
 };
 
-// ajout
-// module.exports.setPosts = async (req, res) => {
-//     try {
-//         // Vérification des champs obligatoires
-//         const { nom, prenom, mail, contact, serie } = req.body;
-//         if (!nom || !prenom || !mail || !contact || !serie) {
-//             return res.status(400).json({ message: "Tous les champs sont requis" });
-//         }
-
-//         // Création du post
-//         const post = await PostModel.create({
-//             nom,
-//             prenom,
-//             mail,
-//             contact,
-//             serie,
-//             createdAt: new Date()
-//         });
-
-//         // res.status(201).json(post); // 201 = Création réussie
-//         res.render("confirmation", { message: `Merci ${prenom} ${nom} ! Votre inscription est réussie.` });
-
-//     } catch (error) {
-//         res.status(500).json({ message: "Erreur serveur", error: error.message });
-//     }
-// };
-
 module.exports.setPosts = async (req, res) => {
     console.log("Données reçues :", req.body); // <-- Ajoute ceci
 
@@ -116,10 +89,8 @@ module.exports.setPosts = async (req, res) => {
 };
 
 
-
-
 // les resultats du test
-exports.postTest = (req, res) => {
+module.exports.postTest = (req, res) => {
     const responses = req.body;
     let score = { Science: 0, Lettres: 0, Maths: 0, Langues: 0 };
 
@@ -133,6 +104,8 @@ exports.postTest = (req, res) => {
     let result = Object.keys(score).reduce((a, b) => (score[a] > score[b] ? a : b));
     res.render("test/result", { result: `Filière suggérée : ${result}` });
 };
+
+
 
 // modifier
 module.exports.editPost = async (req, res) => {
