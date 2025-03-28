@@ -64,238 +64,61 @@
 
             <!-- premiere section avec les photos des universites -->
 
-            <section class="container mx-auto p-4">
-                <!-- Titre -->
-                <div class="p-2">
-                    <p
-                        class="font-bold text-xl text-gray-800 tracking-wide text-center">
-                        Plusieurs milliers d'écoles à votre disposition pour
-                        faire
-                        vos choix
-                    </p>
+           
+        <section class="container mx-auto p-4">
+            <!-- Titre -->
+            <div class="p-2">
+                <p class="font-bold text-xl text-gray-800 tracking-wide text-center">
+                    Les métiers d'avenir qui vont transformer le monde
+                </p>
+            </div>
+        
+            <!-- Grille des métiers -->
+            <div class="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Métier 1 -->
+                <div class="w-full h-auto relative group bg-white p-5 rounded-3xl shadow-lg text-center">
+                    <i class="fa-solid fa-robot text-4xl text-blue-500"></i>
+                    <h3 class="text-lg font-bold mt-3">Développeur en Intelligence Artificielle</h3>
+                    <p class="text-gray-600 text-sm mt-2">Conçoit des algorithmes pour automatiser et améliorer divers processus.</p>
                 </div>
-
-                <!-- Grille d'écoles -->
-                <div
-                    class="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <!-- Carte école -->
-                    <div class="w-full h-auto relative group">
-                        <!-- Icône de cœur à droite -->
-                        <div class="absolute top-3 right-3">
-                            <div class="p-2">
-                                <i
-                                    class="fa-solid fa-heart text-black text-lg"></i>
-                            </div>
-                        </div>
-
-                        <!-- Image -->
-                        <img src="Images/university1.jpg" alt="Université"
-                            class="w-full h-80 object-cover rounded-3xl">
-
-                        <!-- Overlay bas -->
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                            <p class="text-sm font-medium">Description de
-                                l'image</p>
-                            <span class="text-sm text-gray-200">Une magnifique
-                                vue
-                                sur l'océan au coucher du soleil.</span>
-                        </div>
-
-                        <!-- Notes et Avis -->
-                        <div
-                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                            <!-- Étoile et avis -->
-                            <div
-                                class="text-yellow-400 flex items-center gap-x-2">
-                                <i class="fa-solid fa-star "></i>
-                                <h3 class="text-black font-medium">(10
-                                    avis)</h3>
-                            </div>
-                            <!-- Note -->
-                            <div
-                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                                Noté 4.8/5 par les élèves
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Ecole 2 -->
-                    <div class="w-full h-auto relative group">
-                        <div class="absolute top-3 right-3">
-                            <div class="p-2">
-                                <i
-                                    class="fa-solid fa-heart text-black text-lg"></i>
-                            </div>
-                        </div>
-
-                        <img src="Images/university2.jpg" alt="Université"
-                            class="w-full h-80 object-cover rounded-3xl">
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                            <p class="text-sm font-medium">Description de
-                                l'image</p>
-                            <span class="text-sm text-gray-200">Un cadre idéal
-                                pour
-                                étudier.</span>
-                        </div>
-
-                        <div
-                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                            <div
-                                class="text-yellow-400 flex items-center gap-x-2">
-                                <i class="fa-solid fa-star"></i>
-                                <h3 class="text-black font-medium">(12
-                                    avis)</h3>
-                            </div>
-                            <div
-                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                                Noté 4.9/5 par les élèves
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ecole 3 -->
-                    <div class="w-full h-auto relative group">
-                        <div class="absolute top-3 right-3">
-                            <div class="p-2">
-                                <i
-                                    class="fa-solid fa-heart text-black text-lg"></i>
-                            </div>
-                        </div>
-
-                        <img src="Images/university3.jpg" alt="Université"
-                            class="w-full h-80 object-cover rounded-3xl">
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                            <p class="text-sm font-medium">Description de
-                                l'image</p>
-                            <span class="text-sm text-gray-200">Une université
-                                moderne avec des équipements de pointe.</span>
-                        </div>
-
-                        <div
-                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                            <div
-                                class="text-yellow-400 flex items-center gap-x-2">
-                                <i class="fa-solid fa-star"></i>
-                                <h3 class="text-black font-medium">(8 avis)</h3>
-                            </div>
-                            <div
-                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                                Noté 4.7/5 par les élèves
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ecole 4 -->
-                    <div class="w-full h-auto relative group top-5">
-                        <div class="absolute top-3 right-3">
-                            <div class="p-2">
-                                <i
-                                    class="fa-solid fa-heart text-black text-lg"></i>
-                            </div>
-                        </div>
-
-                        <img src="Images/university4.jpg" alt="Université"
-                            class="w-full h-80 object-cover rounded-3xl">
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                            <p class="text-sm font-medium">Description de
-                                l'image</p>
-                            <span class="text-sm text-gray-200">Une université
-                                moderne avec des équipements de pointe.</span>
-                        </div>
-
-                        <div
-                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                            <div
-                                class="text-yellow-400 flex items-center gap-x-2">
-                                <i class="fa-solid fa-star"></i>
-                                <h3 class="text-black font-medium">(8 avis)</h3>
-                            </div>
-                            <div
-                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                                Noté 4.7/5 par les élèves
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ecole 5 -->
-                    <div class="w-full h-auto relative group top-5">
-                        <div class="absolute top-3 right-3">
-                            <div class="p-2">
-                                <i
-                                    class="fa-solid fa-heart text-black text-lg"></i>
-                            </div>
-                        </div>
-
-                        <img src="Images/university5.jpg" alt="Université"
-                            class="w-full h-80 object-cover rounded-3xl">
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                            <p class="text-sm font-medium">Description de
-                                l'image</p>
-                            <span class="text-sm text-gray-200">Une université
-                                moderne avec des équipements de pointe.</span>
-                        </div>
-
-                        <div
-                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                            <div
-                                class="text-yellow-400 flex items-center gap-x-2">
-                                <i class="fa-solid fa-star"></i>
-                                <h3 class="text-black font-medium">(8 avis)</h3>
-                            </div>
-                            <div
-                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                                Noté 4.7/5 par les élèves
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ecole 6 -->
-                    <div class="w-full h-auto relative group top-5">
-                        <div class="absolute top-3 right-3">
-                            <div class="p-2">
-                                <i
-                                    class="fa-solid fa-heart text-black text-lg"></i>
-                            </div>
-                        </div>
-
-                        <img src="Images/university6.jpg" alt="Université"
-                            class="w-full h-80 object-cover rounded-3xl">
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white rounded-b-3xl">
-                            <p class="text-sm font-medium">Description de
-                                l'image</p>
-                            <span class="text-sm text-gray-200">Une université
-                                moderne avec des équipements de pointe.</span>
-                        </div>
-
-                        <div
-                            class="absolute left-0 right-0 flex items-center justify-between px-4 py-2 bg-white bg-opacity-80 rounded-b-3xl">
-                            <div
-                                class="text-yellow-400 flex items-center gap-x-2">
-                                <i class="fa-solid fa-star"></i>
-                                <h3 class="text-black font-medium">(8 avis)</h3>
-                            </div>
-                            <div
-                                class="text-black text-sm font-medium bg-gray-200 rounded-full px-3 py-1">
-                                Noté 4.7/5 par les élèves
-                            </div>
-                        </div>
-                    </div>
-
+        
+                <!-- Métier 2 -->
+                <div class="w-full h-auto relative group bg-white p-5 rounded-3xl shadow-lg text-center">
+                    <i class="fa-solid fa-shield-alt text-4xl text-red-500"></i>
+                    <h3 class="text-lg font-bold mt-3">Ingénieur en Cybersécurité</h3>
+                    <p class="text-gray-600 text-sm mt-2">Protège les données et les systèmes contre les cyberattaques.</p>
                 </div>
-
-            </section>
-
+        
+                <!-- Métier 3 -->
+                <div class="w-full h-auto relative group bg-white p-5 rounded-3xl shadow-lg text-center">
+                    <i class="fa-solid fa-chart-line text-4xl text-green-500"></i>
+                    <h3 class="text-lg font-bold mt-3">Data Scientist</h3>
+                    <p class="text-gray-600 text-sm mt-2">Analyse les données pour en extraire des tendances et aider à la prise de décision.</p>
+                </div>
+        
+                <!-- Métier 4 -->
+                <div class="w-full h-auto relative group bg-white p-5 rounded-3xl shadow-lg text-center">
+                    <i class="fa-solid fa-solar-panel text-4xl text-yellow-500"></i>
+                    <h3 class="text-lg font-bold mt-3">Ingénieur en Énergies Renouvelables</h3>
+                    <p class="text-gray-600 text-sm mt-2">Développe des solutions basées sur le solaire, l’éolien ou l’hydrogène.</p>
+                </div>
+        
+                <!-- Métier 5 -->
+                <div class="w-full h-auto relative group bg-white p-5 rounded-3xl shadow-lg text-center">
+                    <i class="fa-solid fa-dna text-4xl text-purple-500"></i>
+                    <h3 class="text-lg font-bold mt-3">Spécialiste en Biotechnologies</h3>
+                    <p class="text-gray-600 text-sm mt-2">Travaille sur l’édition génétique, les vaccins et les traitements innovants.</p>
+                </div>
+        
+                <!-- Métier 6 -->
+                <div class="w-full h-auto relative group bg-white p-5 rounded-3xl shadow-lg text-center">
+                    <i class="fa-solid fa-car text-4xl text-orange-500"></i>
+                    <h3 class="text-lg font-bold mt-3">Spécialiste en Mobilité Électrique</h3>
+                    <p class="text-gray-600 text-sm mt-2">Conçoit les véhicules du futur plus propres et plus efficaces.</p>
+                </div>
+            </div>
+        </section>
+        
             <!-- deuxieme section avec l'image test -->
 
             <section class="p-8 m-5 ">
