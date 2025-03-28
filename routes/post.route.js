@@ -1,5 +1,5 @@
 const express = require("express"); 
-const { setPosts, getForm, getConnexion, getTest, postTest } = require("../controllers/post.controllers");
+const { setPosts, getForm, getConnexion, getTest, postTest, getConfirmation } = require("../controllers/post.controllers");
 const router = express.Router();
 
 //recuperer tous les articles
@@ -22,9 +22,8 @@ router.get('/:id', (req, res) => {
     res.json({messageId: req.params.id});
 });
 
-//ajouter un article
+// ajouter un article
 router.post("/inscription", setPosts);
-
 
 // ajouter de questions
 router.post("/submit", postTest);

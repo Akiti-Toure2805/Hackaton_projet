@@ -44,14 +44,14 @@ app.get('/formulaire', (req, res) => {
 
 // Route pour gérer la soumission du formulaire
 app.post('/inscription', (req, res) => {
-    const { nom, prenom, email, Serie, contact } = req.body;
+    const { nom, prenom, email, contact, serie } = req.body;
+
 
     // Après que l'utilisateur ait soumis le formulaire, on le redirige vers une nouvelle page de confirmation
     res.render('confirmation', {
-        message: `Merci ${prenom} ${nom} ! Votre inscription est terminée. Vous pouvez maintenant passer le test psychométrique.`
+        message: `Merci ${prenom} ${nom} ! Votre inscription est terminée. Vous pouvez maintenant passer le test d'orientation.`
     });
 });
-
 
 // Route pour afficher la page de confirmation
 app.get('/confirmation', (req, res) => {
@@ -59,6 +59,7 @@ app.get('/confirmation', (req, res) => {
         message: req.query.message || 'Vous avez bien été inscrit !'
     });
 });
+
 
 
 // La gestion des routes de requêtes
